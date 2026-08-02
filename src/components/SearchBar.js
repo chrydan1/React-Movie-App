@@ -11,7 +11,7 @@ const SearchBar = () => {
   async function searchMovie(query) {
     try {
       const response = await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=f43ec82a5f24fe6190891894b7436c7a&query=${query}`
+        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&query=${query}`
       );
 
       if (response.ok) {
