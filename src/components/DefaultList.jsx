@@ -32,24 +32,24 @@ const DefaultList = () => {
   }
 
   return (
-    <div className="MovieList">
+    <div className="movie-list">
       {movies.map((movie) => {
         return (
-          <div className="movie" key={movie.id}>
-            <div className="image-container">
-              <img
+          <div className="movie-list__card" key={movie.id}>
+            <div className="movie-list__image-container">
+              <img className="movie-list__image"
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.title}
               />
             </div>
 
-            <div className="movie-details">
-              <h1 className="movie-title">{movie.title}</h1>
-              <p className="movie-overview">Plot : {movie.overview}</p>
-              <p className="movie-release-date">
+            <div className="movie-list__details">
+              <h1 className="movie-list__title">{movie.title}</h1>
+              <p className="movie-list__overview">Plot : {movie.overview}</p>
+              <p className="movie-list__release-date">
                 Release Date: {movie.release_date}
               </p>
-              <p className="movie-rating">Rating: {movie.vote_average}</p>
+              <p className="movie-list__rating">Rating: {movie.vote_average}</p>
             </div>
           </div>
         );

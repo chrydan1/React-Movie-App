@@ -41,20 +41,18 @@ const SearchBar = () => {
 
   return (
     <div>
-      <form action="" className="form">
-        <div className="branding">
-          <div className="branding">
-            <h1 className="form-title">Christian's Movie Vault</h1>
-            <p className="tagline">Discover your next favorite film</p>
-          </div>
+      <form action="" className="search-form">
+        <div className="search-form__branding">
+            <h1 className="search-form__title">Christian's Movie Vault</h1>
+            <p className="search-form__tagline">Discover your next favorite film</p>
         </div>
 
         <input
           type="text"
-          placeholder="Search movie"
+          placeholder="Search Movie"
           onChange={handleSearch}
           value={searchQuery}
-          className="search-input"
+          className="search-form__input"
         />
       </form>
       <div className="film-strip"></div>

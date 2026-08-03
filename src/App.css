@@ -1,4 +1,4 @@
-.MovieList {
+.movie-list {
   width: 90%;
   margin: 1rem auto;
   padding: 1rem 0;
@@ -8,7 +8,7 @@
   justify-items: center;
 }
 
-.MovieList .movie {
+.movie-list__card {
   width: 100%;
   border-radius: 10px;
   display: flex;
@@ -25,7 +25,7 @@
   gap: 1rem;
 }
 
-.MovieList .movie:hover {
+.movie-list__card:hover {
   transform: translateY(-6px) scale(1.03);
   box-shadow:
     0 0 24px rgba(242, 169, 59, 0.35),
@@ -33,7 +33,7 @@
   border-color: var(--accent-amber);
 }
 
-.MovieList .movie img {
+.movie-list__image {
   width: 100%;
   max-height: 20rem;
   object-fit: cover;
@@ -41,7 +41,7 @@
   margin-bottom: 0.5rem;
 }
 
-.MovieList .movie h1.movie-title {
+.movie-list__title {
   font-family: var(--font-display);
   font-size: 1.8rem;
   letter-spacing: 0.5px;
@@ -49,20 +49,20 @@
   color: var(--text-primary);
 }
 
-.MovieList .movie p {
+.movie-list__overview {
   font-size: 0.95rem;
   line-height: 1.4;
   color: var(--text-secondary);
   flex-grow: 1;
 }
 
-.movie-details {
+.movie-list__details {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.MovieList .movie p.movie-rating {
+.movie-list__rating {
   align-self: flex-start;
   background-color: var(--accent-amber);
   color: var(--bg-dark);
@@ -81,11 +81,16 @@
   }
 }
 
-.MovieList .movie {
+.movie-list__card {
   animation: fadeIn 0.5s ease-in-out;
 }
 
-form {
+
+
+/* Search */
+
+
+.search-form {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -94,20 +99,20 @@ form {
   padding: 1.5rem 0;
 }
 
-.branding {
+.search-form__branding {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
 
-.form h1 {
+.search-form__title {
   font-family: var(--font-display);
   font-size: 2.5rem;
   letter-spacing: 1px;
   color: var(--text-primary);
 }
 
-.search-input {
+.search-form__input {
   width: 40%;
   padding: 12px;
   border: 2px solid var(--surface);
@@ -120,11 +125,11 @@ form {
   margin: 1rem;
 }
 
-.search-input::placeholder {
+.search-form__input::placeholder {
   color: var(--text-secondary);
 }
 
-.search-input:focus {
+.search-form__input:focus {
   border-color: var(--accent-amber);
 }
 
@@ -141,10 +146,10 @@ form {
 }
 
 @media (320px <= width <=480px) {
-  .form h1 {
+  .search-form__title {
     font-size: 1.5rem;
   }
-  .form input {
+  .search-form__input {
     width: 12rem;
   }
 }
