@@ -11,7 +11,7 @@ const SearchBar = () => {
   async function searchMovie(query) {
     try {
       const response = await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&query=${query}`
+        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&query=${query}`,
       );
 
       if (response.ok) {
@@ -42,16 +42,23 @@ const SearchBar = () => {
   return (
     <div>
       <form action="" className="form">
-        <h1>Movie App</h1>
+        <div className="branding">
+          <div className="branding">
+            <h1 className="form-title">Christian's Movie Vault</h1>
+            <p className="tagline">Discover your next favorite film</p>
+          </div>
+        </div>
 
         <input
           type="text"
-          placeholder="Search"
+          placeholder="Search movie"
           onChange={handleSearch}
           value={searchQuery}
           className="search-input"
         />
       </form>
+      <div className="film-strip"></div>
+
       {error && <p>{error}</p>}
 
       {searchQuery ? <Movie movies={movies} /> : <DefaultList />}
