@@ -1,3 +1,5 @@
+/* MOVIES */
+
 .movie-list {
   width: 90%;
   margin: 1rem auto;
@@ -85,10 +87,7 @@
   animation: fadeIn 0.5s ease-in-out;
 }
 
-
-
-/* Search */
-
+/* SEARCH */
 
 .search-form {
   display: flex;
@@ -152,4 +151,122 @@
   .search-form__input {
     width: 12rem;
   }
+}
+
+/* FOOTER */
+
+.footer {
+  width: 90%;
+  margin: 2rem auto 1rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(242, 169, 59, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: center;
+}
+.footer__name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  padding-bottom: 20px;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.footer__link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer__link:hover {
+  color: var(--accent-amber);
+}
+
+.footer__button {
+  background-color: transparent;
+  border: 1px solid var(--accent-amber);
+  color: var(--accent-amber);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  font-weight: bold;
+}
+
+.footer__button:hover {
+  background-color: var(--accent-amber);
+  border-color: var(--accent-amber);
+  color: var(--bg-dark);
+  font-weight: bold;
+}
+
+/* MODAL */
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.modal__content {
+  background-color: var(--surface);
+  border: 1px solid var(--accent-amber);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  animation: fadeIn 0.25s ease-in-out;
+}
+.modal__content h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+.modal__content ul {
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.modal__content li {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.modal__close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+.modal__close:hover {
+  color: var(--accent-amber);
 }

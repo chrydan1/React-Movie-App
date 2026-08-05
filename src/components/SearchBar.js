@@ -43,8 +43,10 @@ const SearchBar = () => {
     <div>
       <form action="" className="search-form">
         <div className="search-form__branding">
-            <h1 className="search-form__title">Christian's Movie Vault</h1>
-            <p className="search-form__tagline">Discover your next favorite film</p>
+          <h1 className="search-form__title">Christian's Movie Vault</h1>
+          <p className="search-form__tagline">
+            Discover your next favorite film
+          </p>
         </div>
 
         <input
@@ -60,6 +62,7 @@ const SearchBar = () => {
       {error && <p>{error}</p>}
 
       {searchQuery ? <Movie movies={movies} /> : <DefaultList />}
+      <div className="film-strip"></div>
     </div>
   );
 };
