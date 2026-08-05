@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/chrydan1/React-Movie-App/static/css/main.59fa3608.css",
+    "main.js": "/chrydan1/React-Movie-App/static/js/main.37ad0fa7.js",
+    "static/js/787.28cb0dcd.chunk.js": "/chrydan1/React-Movie-App/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/chrydan1/React-Movie-App/index.html",
+    "main.59fa3608.css.map": "/chrydan1/React-Movie-App/static/css/main.59fa3608.css.map",
+    "main.37ad0fa7.js.map": "/chrydan1/React-Movie-App/static/js/main.37ad0fa7.js.map",
+    "787.28cb0dcd.chunk.js.map": "/chrydan1/React-Movie-App/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59fa3608.css",
+    "static/js/main.37ad0fa7.js"
+  ]
+}
