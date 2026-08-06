@@ -43,9 +43,23 @@ const SearchBar = () => {
     <div>
       <form action="" className="search-form">
         <div className="search-form__branding">
-          <h1 className="search-form__title">Christian's Movie Vault</h1>
+          <div className="search-form__title-wrap">
+            <h1 className="search-form__title">
+              <span className="search-form__title--word-cine">Cine</span>
+              <span className="search-form__title--word-scope">Scope</span>
+            </h1>
+            <h1
+              className="search-form__title search-form__title--mask"
+              aria-hidden="true"
+            >
+              <span>Cine</span>
+              <span>Scope</span>
+            </h1>
+          </div>
           <p className="search-form__tagline">
-            Discover your next favorite film
+            <span className="search-form__tagline--discover">Discover. </span>
+            <span className="search-form__tagline--search">Search. </span>
+            <span className="search-form__tagline--watch">Watch. </span>
           </p>
         </div>
 
@@ -62,7 +76,6 @@ const SearchBar = () => {
       {error && <p>{error}</p>}
 
       {searchQuery ? <Movie movies={movies} /> : <DefaultList />}
-      <div className="film-strip"></div>
     </div>
   );
 };
