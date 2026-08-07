@@ -3,6 +3,8 @@ import Movie from "./Movie";
 import DefaultList from "./DefaultList";
 import "../App.css";
 import PopcornIcon from "./icons/PopcornIcon";
+import Star from "./icons/Star";
+import curtainsImg from "../assets/images/curtains.png";
 
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -42,43 +44,56 @@ const SearchBar = () => {
 
   return (
     <div>
-      <form action="" className="search-form">
-        <div className="search-form__branding">
-          <PopcornIcon className="search-form__popcorn" />
-          <div className="search-form__title-wrap">
-            <h1 className="search-form__title">
-              <span className="search-form__title--word-cine">Cine</span>
-              <span className="search-form__title--word-scope">Scope</span>
-            </h1>
-            <h1
-              className="search-form__title search-form__title--mask"
-              aria-hidden="true"
-            >
-              <span>Cine</span>
-              <span>Scope</span>
-            </h1>
-          </div>
-          <p className="search-form__tagline">
-            <span className="search-form__tagline--discover">Discover. </span>
-            <span className="search-form__tagline--search">Search. </span>
-            <span className="search-form__tagline--watch">Watch. </span>
-          </p>
-        </div>
-
-        <input
-          type="text"
-          placeholder="Search Movie"
-          onChange={handleSearch}
-          value={searchQuery}
-          className="search-form__input"
+      <div className="hero">
+        <img
+          src={curtainsImg}
+          alt=""
+          className="hero__curtain hero__curtain--left"
         />
-      </form>
+        <img
+          src={curtainsImg}
+          alt=""
+          className="hero__curtain hero__curtain--right"
+        />
+        <form action="" className="search-form">
+           <div className="search-form__icons">
+              <Star className="search-form__star" />
+              <PopcornIcon className="search-form__popcorn" />
+              <Star className="search-form__star search-form__star--right" />
+            </div>
+          <div className="search-form__branding">
+            <div className="search-form__title-wrap">
+              <h1 className="search-form__title">
+                <span className="search-form__title--word-cine">Cine</span>
+                <span className="search-form__title--word-scope">Scope</span>
+              </h1>
+              <h1
+                className="search-form__title search-form__title--mask"
+                aria-hidden="true"
+              >
+                <span>Cine</span>
+                <span>Scope</span>
+              </h1>
+            </div>
+            <p className="search-form__tagline">
+              <span className="search-form__tagline--discover">Discover. </span>
+              <span className="search-form__tagline--search">Search. </span>
+              <span className="search-form__tagline--watch">Watch. </span>
+            </p>
+          </div>
+
+          <input
+            type="text"
+            placeholder="Search Movie"
+            onChange={handleSearch}
+            value={searchQuery}
+            className="search-form__input"
+          />
+        </form>
+      </div>
       <div className="film-strip"></div>
-
       {error && <p>{error}</p>}
-
       {searchQuery ? <Movie movies={movies} /> : <DefaultList />}
-
       <div className="film-strip"></div>
     </div>
   );

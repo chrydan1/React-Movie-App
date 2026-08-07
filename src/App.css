@@ -1,3 +1,31 @@
+/* HERO */
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.hero__curtain {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 320px;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero__curtain--left {
+  left: 0;
+  object-position: left top;
+}
+.hero__curtain--right {
+  right: 0;
+  object-position: right top;
+}
+
+
+
 /* MOVIES */
 
 .movie-list {
@@ -66,7 +94,7 @@
 
 .movie-list__rating {
   align-self: flex-start;
-  background-color: var(--accent-blue);
+  background-color: var(--accent-cyan);
   color: var(--bg-dark);
   font-family: var(--font-body);
   font-weight: 700;
@@ -89,11 +117,33 @@
 
 /* SEARCH */
 
+.search-form__icons{
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 10px;
+}
+
+.search-form__star {
+  display: block;
+  margin: 0 auto 0.5rem;
+  width: 90px;
+  height: 70px;
+  color: var(--accent-magenta);
+  filter: drop-shadow(0 0 3px var(--accent-cyan))
+    drop-shadow(0 0 8px rgb(0, 207, 255));
+}
+
+.search-form__star--right{
+  transform: scaleX(-1);
+}
+
+
 .search-form__popcorn {
   display: block;
   margin: 0 auto 0.5rem;
   width: 90px;
-  height: 90px;
+  height: 70px;
   color: var(--accent-magenta);
   filter: drop-shadow(0 0 3px var(--accent-magenta))
     drop-shadow(0 0 8px rgba(255, 0, 184, 0.95));
@@ -144,16 +194,15 @@
 
 .search-form__title--word-cine {
   -webkit-text-stroke: 2px var(--accent-magenta);
-  filter:
-    drop-shadow(0 0 2px rgba(255, 0, 184, 0.95))
+  filter: drop-shadow(0 0 2px rgba(255, 0, 184, 0.95))
     drop-shadow(0 0 7px rgba(255, 0, 184, 0.65))
     drop-shadow(0 0 16px rgba(255, 0, 184, 0.35));
 }
 .search-form__title--word-scope {
-  -webkit-text-stroke: 2px var(--accent-blue);
-  filter: drop-shadow(0 0 2px rgba(79, 195, 247, 0.95))
-    drop-shadow(0 0 7px rgba(79, 195, 247, 0.65))
-    drop-shadow(0 0 16px rgba(79, 195, 247, 0.35));
+  -webkit-text-stroke: 2px var(--accent-cyan);
+  filter: drop-shadow(0 0 2px rgba(0, 207, 255, 0.95))
+    drop-shadow(0 0 7px rgba(0, 207, 255, 0.65))
+    drop-shadow(0 0 16px rgba(0, 207, 255, 0.35));
 }
 
 .search-form__tagline--discover {
@@ -161,7 +210,7 @@
 }
 
 .search-form__tagline--watch {
-  color: var(--accent-blue);
+  color: var(--accent-cyan);
 }
 
 .search-form__input {
@@ -248,13 +297,13 @@
 }
 
 .footer__link:hover {
-  color: var(--accent-blue);
+  color: var(--accent-magenta);
 }
 
 .footer__button {
   background-color: transparent;
-  border: 1px solid var(--accent-blue);
-  color: var(--accent-blue);
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan);
   padding: 0.4rem 1rem;
   border-radius: 4px;
   font-size: 0.9rem;
@@ -266,8 +315,8 @@
 }
 
 .footer__button:hover {
-  background-color: var(--accent-blue);
-  border-color: var(--accent-blue);
+  background-color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
   color: var(--bg-dark);
   font-weight: bold;
 }
