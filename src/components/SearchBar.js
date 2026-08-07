@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Movie from "./Movie";
 import DefaultList from "./DefaultList";
 import "../App.css";
+import PopcornIcon from "./icons/PopcornIcon";
 
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -43,6 +44,7 @@ const SearchBar = () => {
     <div>
       <form action="" className="search-form">
         <div className="search-form__branding">
+          <PopcornIcon className="search-form__popcorn" />
           <div className="search-form__title-wrap">
             <h1 className="search-form__title">
               <span className="search-form__title--word-cine">Cine</span>
@@ -76,6 +78,8 @@ const SearchBar = () => {
       {error && <p>{error}</p>}
 
       {searchQuery ? <Movie movies={movies} /> : <DefaultList />}
+
+      <div className="film-strip"></div>
     </div>
   );
 };
